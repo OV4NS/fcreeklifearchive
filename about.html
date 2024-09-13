@@ -4,13 +4,13 @@
     <meta charset="utf-8"> 
     <!--Set Mobile Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <!--Page Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="style1.css">    
     <title>FCCMAP</title>
+    <!--Page Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="/style1.css">   
     <!--Google Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--VR MAP JS-->
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
     <!--Leaflet Map Stylesheet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -57,43 +57,28 @@
   </div>
   <!--MAIN MENU-->
     <div class="section1">
-    <h1>Welcome!</h1>
+    <h2>About</h2>
     <hr class="solid">
-    <p>Select a pin on the map to view a location's prompt gallery submissions in VR! </p>
+    <br>
+    <p>False Creek Collage Map is a research project with the goal of fostering discussion with members of the community through engagement activities.</p>
+    <br>
+    <br>
+    <p><b>By turning participatory data into an interactive experience, can we better identify and understand the full scope of the health of False Creek’s environment and community?</b></p>
+    <br>   
+    <br>
+    <img src="/images/promptex.png" align="left" width="30%" height="30%">
+
+    <br>
+    <br>
+    <h1>More than Data</h1>
+    <br>
+    <br>
+    <p>Together we can envision what our communties might look like if they were designed by their inhabitants. What do we factor into these designs and who decides this?</p>
+    <p>Through VR we can experience and bring value to our imaginations, feelings, stories and ideas by placing them into the physical spaces we occupy.</p>
+    <br>
+    <br> 
+    <br> 
    </div>
 
-<!--Leaflet Map-->
-<div id="map">
-<!--MAP JS SCRIPT-->
-<script>
-/*Set View*/
-var map = L.map('map').setView([49.2721, -123.1109], 14);
-/*Add Tile Layer*/
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    minZoom: 0,
-    maxZoom: 19,
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	  subdomains: 'abcd',
-}).addTo(map);
-
-/*ALTERNATE WATERCOLOR TILE LAYER*/
-/*https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png*/
-
-/*Marker 2*/
-var marker = L.marker([49.2721, -123.1109], 14).addTo(map);
-marker.bindPopup(
-  "<b>Habitat Island Workshop</b><br><br>We're hosting an outdoor workshop to test out a variety of drawing and writing prompts – join us and try them out for yourself!<br><br><a href='#'>Learn more (TBA)</a>"
-  ).openPopup();
-
-/*Marker 1*/
-var marker = L.marker([49.2676, -123.0924], 13).addTo(map);
-marker.bindPopup(
-  "<b>ECUAD DEMO PROMPTS</b><br><br>These are an assortment of anonymously submitted answers to a number of different prompts. These are all hand drawn, scanned, and placed into a 360° VR environment.<br><br><a href='/ecumap.html'>VIEW IN VR</a>"
-  ).openPopup();
-
-
-</script>
-
-</div>
       </body>
     </html> 
